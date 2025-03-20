@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>javascript page</title>
+</head>
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:whitesmoke ;
+}
+.mobile{
+  background-color:white;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  margin: right;
+}
+
+.topnav a {
+  float: left;
+  color: whitesmoke;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color:black ;
+}
+
+.topnav a.active {
+  background-color: blueviolet;
+  color: whitesmoke  ;
+}
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+
+.section {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff; 
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+nav {
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color:#000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color:   
+ #ddd;
+}
+
+nav form {
+    float: left;
+}
+
+nav input[type="text"] {
+    padding: 6px;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    border-right: none;
+}
+
+nav input[type="text"]:focus {
+    outline: none;
+}
+.navbar {
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: 0.3s;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            position: relative;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background: rgba(255, 255, 255, 0.1);
+            width: 160px;
+            border-radius: 5px;
+            backdrop-filter: blur(10px);
+        }
+
+        .dropdown li {
+            display: block;
+        }
+
+        .dropdown li a {
+            padding: 10px;
+            display: block;
+            color: #fff;
+        }
+
+        .navbar ul li:hover .dropdown {
+            display: block;
+        }
+
+        /* Search Bar */
+        .search-box {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-box input {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            width: 150px;
+            transition: 0.3s;
+        }
+
+        .search-box input:focus {
+            width: 200px;
+        }
+
+        .search-box button {
+            padding: 8px 12px;
+            background: #ff7eb3;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 5px;
+            transition: 0.3s;
+        }
+
+        .search-box button:hover {
+            background: #ff4f8b;
+        }
+
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .navbar ul {
+                display: none;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.8);
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                text-align: center;
+            }
+
+            .navbar ul li {
+                margin: 10px 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .navbar ul.show {
+                display: flex;
+            }
+        }
+.father{
+  margin: auto;
+
+}
+.Folder{
+  font-family: "Merriweather", serif;
+    font-size: 67px;
+    margin-left: 200px;
+    margin-top: 20px;
+  
+}
+.home{
+    font-size: 30px;
+    text-align: center;
+    margin-right:600px;
+    margin-top: 50px;
+
+}
+.content{
+    height: 560px;
+    margin-top: 120px;
+}
+.image{
+    margin-left: 720px;
+    margin-top: -450px;
+    height: 592px;
+   display: flex;
+    margin-top: -512px;
+}
+.number{
+    height: 59px;
+    margin-left: 240px;
+    margin-top: -42px;
+    border: 4px solid;
+    display: flex;
+}
+.new{
+    width: 1700px;
+}
+.text{
+    text-align: center;
+    background-color:#fa5080;
+    color: white;
+    height: 500px;
+    padding: 3px;   
+}
+.head{
+    margin-top: 92px;
+    font-size: 56px;
+}
+.items{
+    font-size: 30px;
+
+}
+.number {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.number:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+.courses-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 19px 20px;
+            flex-wrap: wrap;
+            margin-bottom: 6px;
+        }
+.course-card :hover {
+            transform: translateY(-8px);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+.course-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+.course-card img {
+            width: 100%;
+            height: 265px;
+            object-fit: cover;
+        }
+
+        .course-info {
+            padding: 20px;
+        }
+
+        .course-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .course-price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .course-description {
+            font-size: 14px;
+            margin-top: 10px;
+            color: #666;
+        }
+        .team-section {
+            padding: 50px 0;
+            background-color: black;
+        }
+
+        .team-section {
+      padding: 50px 0;
+    }
+    .team-section h2 {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .team-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+    .team-card {
+      background: #fff;
+      color: #000;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      width: 220px;
+      position: relative;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+    .team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    .team-card img {
+      width: 202px;
+    height: 213px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    }
+    .team-card h3 {
+      font-size: 18px;
+      margin: 10px 0 5px;
+    }
+    .team-card p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .social-icons i {
+      font-size: 18px;
+      margin: 0 5px;
+      cursor: pointer;
+      color: #333;
+      transition: color 0.3s;
+    }
+    .social-icons i:hover {
+      color: #007bff;
+    }
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #ff6b6b;
+      color: white;
+      border: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .left {
+      left: -15px;
+    }
+    .right {
+      right: -15px;
+    }
+     
+        .text-content {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .text-content h2 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .text-content p {
+            color: #666;
+            margin: 15px 0;
+        }
+        .text-content a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .text-content a:hover {
+            background: #444;
+        }
+        
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 0, 0, 0.6);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .prev { left: 10px; }
+        .next { right: 10px; }
+        .me{
+            color: black;
+            width: 1000px;
+        }
+</style>
+<body>
+    
+  <div class="father">
+    <nav class="navbar">
+        <a href="#" class="logo">MyWebsite</a>
+        
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Information</a></li>
+            <li><a href="#">News</a></li>
+            <li>
+                <a href="#">More ▼</a>
+                <ul class="dropdown">
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <button>Go</button>
+        </div>
+
+        <div class="menu-toggle">&#9776;</div>
+    </nav>
+
+<div class="content">
+    <h1 class="Folder">Language <br>Courses and <br> Programs</h1>
+
+<p class="  home">Join our international family today! Please call us <br>for more info</p>
+
+    <img class="image"src="Screenshot 2025-03-13 044101.png">
+
+</div>
+<div >
+    <img class="new"src="C:\Users\swostika\Pictures\Screenshots\Screenshot 2025-03-13 063610.png">
+</div>  
+    </div>
+<div class="text">
+    <h1 class="head">Our Courses</h1>
+    <p class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua.</p>
+
+<div class="courses-container">
+        <div class="course-card">
+            <img src="C:\Users\Student\Downloads\Screenshot 2025-03-13 065302.png" >
+            <div class="course-info">
+               
+                <p class="course-description">Our best English course for starter level.</p>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <img src="C:\Users\Student\Downloads\Screenshot 2025-03-13 064830.png" >
+            <div class="course-info">
+               
+                <p class="course-description">Sample text. Click to select the Text Element.</p>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <img src="C:\Users\Student\Documents\download (1).jfif">
+            <div class="course-info">
+                
+                <p class="course-description">Sample text. Click to select the Text Element.</p>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <img src="C:\Users\Student\Documents\download.jfif" >
+            <div class="course-info">
+                <p class="course-description">Sample text. Click to select the Text Element.</p>
+            </div>
+        </div>
+    </div>
+    <section class="team-section">
+    <h2>Meet the Passionate Team</h2>
+    <div class="team-container">
+      <div class="team-card">
+        <button class="nav-btn left">&lt;</button>
+        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Walter Lilly">
+        <h3>Walter Lilly</h3>
+        <p>French Teacher</p>
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Peter Howard">
+        <h3>Peter Howard</h3>
+        <p>German Teacher</p>
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="James Oliver">
+        <h3>James Oliver</h3>
+        <p>English Teacher</p>
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ann Richmond">
+        <h3>Ann Richmond</h3>
+        <p>Partner</p>
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+    
+    </script>
+</body>
+</html>
